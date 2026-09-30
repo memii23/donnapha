@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriPoly - เกมเศรษฐีสารอาหาร 5 หมู่</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- ด้านซ้าย: กระดานเกม -->
+        <div class="board-section">
+            <h1 class="game-title">🥗 NutriPoly 🎲</h1>
+            <div class="board-grid" id="board">
+                <!-- ช่องบนกระดานจะถูกสร้างด้วย JavaScript -->
+            </div>
+        </div>
+
+        <!-- ด้านขวา: แผงควบคุมและสถานะผู้เล่น -->
+        <div class="control-section">
+            <div class="player-card">
+                <h2>👤 สถานะผู้เล่น</h2>
+                <div class="hp-box">
+                    <span>❤️ แต้มสุขภาพ (HP):</span>
+                    <strong id="player-hp">100</strong>
+                </div>
+                <h3>🎒 คลังสารอาหารที่สะสม (5 หมู่)</h3>
+                <ul class="inventory-list" id="inventory">
+                    <li>🥩 หมู่ 1 โปรตีน: <span id="nut-1">❌</span></li>
+                    <li>🍚 หมู่ 2 คาร์โบไฮเดรต: <span id="nut-2">❌</span></li>
+                    <li>🥦 หมู่ 3 เกลือแร่: <span id="nut-3">❌</span></li>
+                    <li>🍎 หมู่ 4 วิตามิน: <span id="nut-4">❌</span></li>
+                    <li>🥑 หมู่ 5 ไขมัน: <span id="nut-5">❌</span></li>
+                </ul>
+            </div>
+
+            <div class="action-card">
+                <div class="dice-result">
+                    <span>🎲 ผลทอยลูกเต๋า: </span>
+                    <strong id="dice-num">-</strong>
+                </div>
+                <button class="btn-roll" onclick="rollDice()">🎲 ทอยลูกเต๋า</button>
+            </div>
+
+            <div class="log-box" id="game-log">
+                <p class="log-item">🎮 ยินดีต้อนรับสู่ NutriPoly! กดปุ่มทอยลูกเต๋าเพื่อเริ่มเล่น</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

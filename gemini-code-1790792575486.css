@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Sukhumvit Set', 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #121829;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    display: flex;
+    gap: 30px;
+    background: #1e2640;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 1100px;
+    width: 100%;
+}
+
+.board-section {
+    flex: 1;
+    text-align: center;
+}
+
+.game-title {
+    color: #00ffcc;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* ตารางกระดาน 4x4 */
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.tile {
+    background: #2a3454;
+    border: 2px solid #3d4b76;
+    border-radius: 12px;
+    padding: 15px 5px;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+}
+
+.tile.active {
+    border-color: #00ffcc;
+    background: #37466e;
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+.player-marker {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+}
+
+/* แผงควบคุม */
+.control-section {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.player-card, .action-card, .log-box {
+    background: #2a3454;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.hp-box {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ff5252;
+}
+
+.inventory-list {
+    list-style: none;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.inventory-list li {
+    margin-bottom: 6px;
+}
+
+.btn-roll {
+    width: 100%;
+    padding: 14px;
+    background: #00c853;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.btn-roll:hover {
+    background: #00e676;
+    transform: scale(1.02);
+}
+
+.dice-result {
+    font-size: 18px;
+}
+
+.log-box {
+    height: 120px;
+    overflow-y: auto;
+    font-size: 13px;
+    color: #cfd8dc;
+    text-align: left;
+}
+
+.log-item {
+    margin-bottom: 5px;
+}
